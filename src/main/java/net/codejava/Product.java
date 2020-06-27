@@ -13,11 +13,11 @@ public class Product {
 	private String madein;
 	private float price;
 	private String type;
-
+private String status;
 	protected Product() {
 	}
 
-	protected Product(Long id, String name, String brand, String madein, float price,String type) {
+	protected Product(Long id, String name, String brand, String madein, float price,String type,String status) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -25,6 +25,7 @@ public class Product {
 		this.madein = madein;
 		this.price = price;
 		this.type=type;
+		this.status=status;
 	}
 
 	@Id
@@ -75,5 +76,14 @@ public class Product {
 	public void setType(String type) {
 		this.type = type;
 	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
 
 }
