@@ -12,17 +12,19 @@ public class Product {
 	private String brand;
 	private String madein;
 	private float price;
+	private String type;
 
 	protected Product() {
 	}
 
-	protected Product(Long id, String name, String brand, String madein, float price) {
+	protected Product(Long id, String name, String brand, String madein, float price,String type) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.brand = brand;
 		this.madein = madein;
 		this.price = price;
+		this.type=type;
 	}
 
 	@Id
@@ -65,6 +67,13 @@ public class Product {
 
 	public void setPrice(float price) {
 		this.price = price;
+	}
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 }
